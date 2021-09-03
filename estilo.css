@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 12px;
+  font-family: 'Spartan', sans-serif;
+}
+
+body header {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 30px 15px;
+  z-index: 100;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body header nav {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: .8s;
+  transition: .8s;
+}
+
+body header nav .openNav {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  left: 15px;
+  top: 30px;
+}
+
+body header nav .links {
+  margin-left: -1000px;
+}
+
+body header nav .links .closeNav {
+  display: none;
+}
+
+body header nav .links a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  position: relative;
+}
+
+body header nav .links a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: transparent;
+  width: 40%;
+  height: 2px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+body header nav .links a:hover:after {
+  background-color: #fff;
+}
+
+body header .navActive {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 10px 30px;
+}
+
+body header .navActive .openNav {
+  display: none;
+}
+
+body header .navActive .links {
+  margin-left: 15px;
+}
+
+body header .navActive .links .closeNav {
+  display: inline;
+  background-color: transparent;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+body header .navActive .links a {
+  color: #000;
+}
+
+body main {
+  overflow: hidden;
+}
+
+body main .wrapSlider {
+  width: 300vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -100vw;
+}
+
+body main .wrapSlider .itemSlider {
+  display: block;
+  position: relative;
+}
+
+body main .wrapSlider .itemSlider .divImg {
+  width: 100vw;
+}
+
+body main .wrapSlider .itemSlider .divImg img {
+  width: 100%;
+  height: 100%;
+}
+
+body main .wrapSlider .itemSlider .divText {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 340px;
+}
+
+body main .wrapSlider .itemSlider .divText .text {
+  padding: 15px;
+}
+
+body main .wrapSlider .itemSlider .divText .text h1 {
+  font-size: 30px;
+}
+
+body main .wrapSlider .itemSlider .divText .text p {
+  margin: 35px 0;
+  line-height: 16px;
+  color: #a1a1a1;
+}
+
+body main .wrapSlider .itemSlider .divText .text a {
+  letter-spacing: 10px;
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+body main .wrapSlider .itemSlider .divText .text a:hover {
+  color: #a1a1a1;
+}
+
+body main .wrapSlider .itemSlider .divText .text a:hover svg path {
+  fill: #a1a1a1;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+body main .wrapAbout {
+  position: relative;
+}
+
+body main .wrapAbout .direction {
+  position: absolute;
+  right: 0;
+  top: -407px;
+}
+
+body main .wrapAbout .direction button {
+  border: none;
+  background-color: black;
+  padding: 18px 25px;
+  cursor: pointer;
+  -webkit-transition: .6s;
+  transition: .6s;
+}
+
+body main .wrapAbout .direction .btnRight {
+  margin-left: -3px;
+}
+
+body main .wrapAbout .direction button:hover {
+  background-color: #454545;
+}
+
+body main .wrapAbout .about {
+  display: -ms-grid;
+  display: grid;
+}
+
+body main .wrapAbout .about .divImg img {
+  width: 100%;
+  height: 100%;
+}
+
+body main .wrapAbout .about .divText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 300px;
+}
+
+body main .wrapAbout .about .divText .text {
+  padding: 0 15px;
+}
+
+body main .wrapAbout .about .divText .text p {
+  margin-top: 10px;
+  color: #a1a1a1;
+}
+
+body footer .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+body footer .attribution a {
+  color: #3e52a3;
+}
+
+@media (min-width: 912px) {
+  body header {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    padding: 50px 50px;
+  }
+  body header img {
+    height: 23px;
+  }
+  body header nav {
+    margin-left: 40px;
+  }
+  body header nav button {
+    display: none;
+  }
+  body header nav .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0;
+  }
+  body main .wrapSlider .itemSlider {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  body main .wrapSlider .itemSlider .divImg {
+    width: 55vw;
+  }
+  body main .wrapSlider .itemSlider .divText {
+    width: 45vw;
+    height: auto;
+  }
+  body main .wrapSlider .itemSlider .divText .text {
+    padding: 0 100px;
+  }
+  body main .wrapSlider .itemSlider .divText .text h1 {
+    font-size: 37px;
+  }
+  body main .wrapSlider .itemSlider .divText .text p {
+    margin: 35px 0;
+    line-height: 16px;
+  }
+  body main .wrapSlider .itemSlider .divText .text a {
+    letter-spacing: 10px;
+  }
+  body main .wrapAbout .direction {
+    top: -77px;
+    left: 55vw;
+  }
+  body main .wrapAbout .direction button {
+    padding: 25px 35px;
+  }
+  body main .wrapAbout .about {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  body main .wrapAbout .about .divText .text {
+    padding: 0 50px;
+  }
+}
+/*# sourceMappingURL=estilo.css.map */
